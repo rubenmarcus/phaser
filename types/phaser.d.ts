@@ -26458,11 +26458,11 @@ declare namespace Phaser {
              * (such as a Filter, DynamicTexture, or a Camera with alpha between 0 and 1).
              * 
              * Note: This method will only be available if the CaptureFrame Game Object has been built into Phaser.
-             * @param config The configuration object this Game Object will use to create itself. CaptureFrame only uses the `key`, `visible`, `depth`, and `add` properties.
+             * @param config The configuration object this Game Object will use to create itself. The `key` property identifies the Render Texture this Game Object will capture. CaptureFrame only uses the `key`, `visible`, `depth`, and `add` properties.
              * @param addToScene Add this Game Object to the Scene after creating it? If set this argument overrides the `add` property in the config object.
              * @returns The Game Object that was created.
              */
-            captureFrame(config: Phaser.Types.GameObjects.GameObjectConfig, addToScene?: boolean): Phaser.GameObjects.CaptureFrame;
+            captureFrame(config: Phaser.Types.GameObjects.Sprite.SpriteConfig, addToScene?: boolean): Phaser.GameObjects.CaptureFrame;
 
             /**
              * Creates a new Container Game Object and returns it.
@@ -26564,11 +26564,11 @@ declare namespace Phaser {
              * Creates a new Image Game Object and returns it.
              * 
              * Note: This method will only be available if the Image Game Object has been built into Phaser.
-             * @param config The configuration object this Game Object will use to create itself.
+             * @param config The configuration object this Game Object will use to create itself. The `key` property identifies the texture to use, and the optional `frame` property identifies a specific frame within that texture.
              * @param addToScene Add this Game Object to the Scene after creating it? If set this argument overrides the `add` property in the config object.
              * @returns The Game Object that was created.
              */
-            image(config: Phaser.Types.GameObjects.GameObjectConfig, addToScene?: boolean): Phaser.GameObjects.Image;
+            image(config: Phaser.Types.GameObjects.Sprite.SpriteConfig, addToScene?: boolean): Phaser.GameObjects.Image;
 
             /**
              * Creates a new Layer Game Object and returns it.
